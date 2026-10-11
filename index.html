@@ -1,0 +1,888 @@
+
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>KATAK TECHNOLOGIES</title>
+    
+    <meta name="description" content="KATAK TECHNOLOGIES - software development agency specializing in custom software solutions, web development, AI, automation, and data management systems. Founded by Er. Manoranjan Behera.">
+    <meta name="keywords" content="KATAK TECHNOLOGIES, Katak Technologies, Er. Manoranjan Behera, custom software solutions, web development, AI, automation, data management systems, freelance agency India, Katakia">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "KATAK TECHNOLOGIES",
+      "url": "https://kataktechnologies.in/",
+      "logo": "https://i.ibb.co/V00YDLgN/logo.png",
+      "founder": {
+        "@type": "Person",
+        "name": "Er. Manoranjan Behera"
+      },
+      "description": "Premium software development agency specializing in custom software solutions, web development, AI, automation, and data management systems.",
+      "disambiguatingDescription": "An independent software agency founded by Er. Manoranjan Behera, distinct from KAT Technologies.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91-9583950766",
+        "contactType": "sales"
+      }
+    }
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            obsidian: '#030303',
+                            charcoal: '#0a0a0c',
+                            champagne: '#F4E2C2',
+                            gold: '#D4AF37',
+                            copper: '#AA771C',
+                            lightbg: '#FAFAFA',
+                            lightcard: '#FFFFFF',
+                        }
+                    },
+                    backgroundImage: {
+                        'mesh-dark': 'radial-gradient(at 20% 30%, hsla(43,74%,46%,0.08) 0px, transparent 50%), radial-gradient(at 80% 80%, hsla(43,74%,46%,0.05) 0px, transparent 50%), radial-gradient(at 50% 50%, hsla(0,0%,0%,1) 0px, transparent 100%)',
+                        'mesh-light': 'radial-gradient(at 20% 30%, hsla(43,74%,46%,0.12) 0px, transparent 50%), radial-gradient(at 80% 80%, hsla(43,74%,46%,0.08) 0px, transparent 50%), radial-gradient(at 50% 50%, hsla(0,0%,100%,1) 0px, transparent 100%)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Base Reset & Layout Constraints */
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+            position: relative;
+            background-color: #FAFAFA;
+            color: #111;
+            transition: background-color 0.8s cubic-bezier(0.16, 1, 0.3, 1), color 0.8s ease;
+        }
+        
+        .dark body {
+            background-color: #030303;
+            color: #FAFAFA;
+        }
+
+        /* Typography Enhancements */
+        .text-gradient-gold {
+            background: linear-gradient(135deg, #F4E2C2 0%, #D4AF37 50%, #AA771C 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+        }
+        
+        html:not(.dark) .text-gradient-gold {
+            background: linear-gradient(135deg, #AA771C 0%, #D4AF37 50%, #8c5f0f 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .font-serif-italic {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+        }
+
+        /* Ultra-Clean Glassmorphism */
+        .glass {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
+        }
+        
+        .dark .glass {
+            background: rgba(10, 10, 12, 0.4);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+        }
+
+        /* 3D Anti-Gravity Floating Animations (Smooth & Organic) */
+        @keyframes float-complex-1 {
+            0% { transform: translate(0, 0) rotate(0deg) scale(1); }
+            33% { transform: translate(15px, -25px) rotate(2deg) scale(1.02); }
+            66% { transform: translate(-10px, 15px) rotate(-1deg) scale(0.98); }
+            100% { transform: translate(0, 0) rotate(0deg) scale(1); }
+        }
+        
+        @keyframes float-complex-2 {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(-20px, -30px) rotate(-3deg); }
+            100% { transform: translate(0, 0) rotate(0deg); }
+        }
+
+        @keyframes float-gentle {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+        
+        .anti-gravity-1 { animation: float-complex-1 18s ease-in-out infinite; }
+        .anti-gravity-2 { animation: float-complex-2 22s ease-in-out infinite alternate; }
+        
+        /* Advanced 3D Hover Interactions */
+        .anti-gravity-hover { 
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s ease; 
+            transform-style: preserve-3d; 
+        }
+        .anti-gravity-hover:hover { 
+            transform: translateY(-10px) scale(1.02) rotateX(4deg) rotateY(-4deg); 
+        }
+
+        /* Marquee Staggered Animations */
+        .float-active { 
+            animation: float-gentle 4s ease-in-out infinite; 
+            will-change: transform;
+        }
+        .marquee-content > div:nth-child(even) .float-active { 
+            animation-delay: 2s; 
+        }
+
+        /* Infinite Marquee */
+        .marquee-container {
+            display: flex;
+            overflow: hidden;
+            user-select: none;
+            gap: 2rem;
+            mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+        }
+        .marquee-content {
+            display: flex;
+            flex-shrink: 0;
+            justify-content: space-around;
+            align-items: center;
+            min-width: 100%;
+            gap: 4rem; /* Slightly increased gap for icons */
+            animation: scroll-x 40s linear infinite;
+        }
+        @keyframes scroll-x {
+            from { transform: translateX(0); }
+            to { transform: translateX(calc(-100% - 4rem)); }
+        }
+
+        /* Scroll Revelations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: rgba(212, 175, 55, 0.4); border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(212, 175, 55, 1); }
+        
+        * { -webkit-tap-highlight-color: transparent; }
+    </style>
+</head>
+<body class="bg-mesh-light dark:bg-mesh-dark antialiased">
+
+    <div class="fixed inset-0 pointer-events-none z-[-1] overflow-hidden">
+        <div class="absolute top-[-5%] left-[-10%] w-[40vw] h-[40vw] rounded-full bg-brand-gold/10 dark:bg-brand-gold/5 blur-[120px] anti-gravity-1"></div>
+        <div class="absolute bottom-[-10%] right-[-5%] w-[45vw] h-[45vw] rounded-full bg-brand-copper/5 dark:bg-brand-copper/10 blur-[130px] anti-gravity-2"></div>
+    </div>
+
+    <nav class="fixed w-full z-50 transition-all duration-500 py-6" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
+            
+            <!-- Logo Area -->
+            <div class="flex items-center gap-4 z-50">
+                <div class="relative group">
+                    <div class="absolute inset-0 bg-brand-gold rounded-full blur-md opacity-30 group-hover:opacity-60 transition-opacity duration-500"></div>
+                    <img src="https://i.ibb.co/V00YDLgN/logo.png" 
+                         alt="KATAK TECHNOLOGIES Logo" 
+                         class="relative h-10 w-10 md:h-12 md:w-12 object-cover rounded-full border border-gray-200 dark:border-brand-gold/30 shadow-lg" 
+                         onerror="this.onerror=null; this.src='https://placehold.co/100x100/111111/D4AF37?text=KT'"/>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-serif text-xl md:text-2xl font-bold tracking-widest text-gray-900 dark:text-white uppercase leading-none">KATAK</span>
+                    <span class="font-sans text-[0.6rem] md:text-xs font-semibold tracking-[0.3em] text-brand-gold mt-1">Technologies</span>
+                </div>
+            </div>
+
+            <!-- Theme Toggle -->
+            <div class="flex items-center z-50">
+                <button onclick="toggleTheme()" class="w-12 h-12 rounded-full glass flex items-center justify-center text-gray-600 dark:text-brand-gold hover:scale-110 transition-transform duration-300">
+                    <i class="fa-solid fa-moon dark:hidden text-sm"></i>
+                    <i class="fa-solid fa-sun hidden dark:block text-sm"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative min-h-screen flex items-center pt-32 pb-20 px-6 md:px-12 overflow-hidden">
+        <div class="max-w-5xl mx-auto w-full relative z-10 text-center flex flex-col items-center">
+            
+            <div class="reveal float-gentle mb-8">
+               
+            
+            <h1 class="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] leading-[1.1] text-gray-900 dark:text-white mb-8 reveal" style="transition-delay: 100ms;">
+                We build Software That<br class="hidden md:block" /> Drives <span class="font-serif-italic text-gradient-gold">Real Impact.</span>
+            </h1>
+            
+            <p class="font-sans text-lg md:text-xl text-gray-500 dark:text-gray-400 max-w-3xl leading-relaxed mb-12 reveal" style="transition-delay: 200ms;">
+                Custom software solutions engineered with meticulous precision. We help startups and enterprises grow, scale, and definitively lead in the digital world.
+            </p>
+            
+            <!-- Fixed Alignment: Added justify-center items-center w-full -->
+            <div class="flex flex-col sm:flex-row justify-center items-center w-full gap-6 reveal" style="transition-delay: 300ms;">
+                <button onclick="openModal('contact-modal')" class="relative group px-10 py-5 bg-gray-900 dark:bg-white text-white dark:text-black overflow-hidden rounded-sm shadow-2xl">
+                    <div class="absolute inset-0 w-full h-full bg-brand-gold transform scale-x-0 origin-left transition-transform duration-500 ease-out group-hover:scale-x-100"></div>
+                    <span class="relative z-10 text-xs font-bold uppercase tracking-widest group-hover:text-black transition-colors duration-500">Start Your Project</span>
+                </button>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="py-32 px-6 md:px-12 relative z-10 text-center flex flex-col items-center">
+        <div class="reveal max-w-3xl">
+            <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl text-gray-900 dark:text-white mb-8">
+                Ready to elevate your <span class="font-serif-italic text-gradient-gold">enterprise?</span>
+            </h2>
+            <div class="w-16 h-px bg-brand-gold mx-auto mb-8"></div>
+            <p class="text-gray-600 dark:text-gray-400 text-lg mb-12">
+                Initiate a dialogue with our architectural team. Let us engineer your business growth.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
+                <button onclick="openModal('contact-modal')" class="px-10 py-5 bg-gray-900 dark:bg-white text-white dark:text-black font-bold uppercase tracking-widest text-xs hover:scale-105 transition-transform duration-300 rounded-sm w-full sm:w-auto shadow-xl">
+                    Contact Us Today
+                </button>
+                <a href="https://wa.me/919583950766" target="_blank" class="px-10 py-5 glass border-gray-300 dark:border-white/20 text-gray-900 dark:text-white hover:border-[#25D366] hover:text-[#25D366] dark:hover:border-[#25D366] dark:hover:text-[#25D366] transition-colors duration-300 font-bold uppercase tracking-widest text-xs w-full sm:w-auto flex items-center justify-center gap-3 rounded-sm">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> +91 95839 50766
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 md:px-12 relative z-10 border-t border-gray-200 dark:border-white/5">
+        <div class="max-w-5xl mx-auto reveal glass p-10 md:p-16 rounded-sm relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-brand-gold via-brand-copper to-transparent"></div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10">
+                <div>
+                    <h2 class="font-serif text-2xl md:text-5xl text-gray-900 dark:text-white leading-tight">
+                        Engineered by <span class="font-serif-italic text-gradient-gold">Katakia.</span>
+                    </h2>
+                </div>
+                <div>
+                    <p class="font-sans text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
+                        "At KATAK TECHNOLOGIES, we treat every project as a masterpiece. We reject the mundane to build robust, scalable, and visually arresting platforms that command attention."
+                    </p>
+                    <div>
+                        <p class="font-serif text-1xl text-gray-900 dark:text-white font-bold tracking-wide">Er. Manoranjan Behera</p>
+                        <p class="text-xs uppercase tracking-[0.2em] font-bold text-brand-gold mt-2">Founder</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 overflow-hidden relative z-10">
+        <div class="marquee-container opacity-80 hover:opacity-100 transition-opacity duration-500">
+            <div class="marquee-content">
+                <!-- Group 1 -->
+                <div>
+                    <div class="flex items-center gap-3 float-active">
+                        <i class="fa-brands fa-html5 text-[#E34F26] text-3xl"></i>
+                        <span class="text-sm uppercase tracking-widest font-bold text-gray-800 dark:text-gray-400">HTML</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex items-center gap-3 float-active">
+                        <i class="fa-brands fa-js text-[#F7DF1E] text-3xl"></i>
+                        <span class="text-sm uppercase tracking-widest font-bold text-gray-800 dark:text-gray-400">JS</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex items-center gap-3 float-active">
+                        <i class="fa-brands fa-css3-alt text-[#1572B6] text-3xl"></i>
+                        <span class="text-sm uppercase tracking-widest font-bold text-gray-800 dark:text-gray-400">CSS</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex items-center gap-3 float-active">
+                        <i class="fa-brands fa-php text-[#777BB4] text-3xl"></i>
+                        <span class="text-sm uppercase tracking-widest font-bold text-gray-800 dark:text-gray-400">PHP</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex items-center gap-3 float-active">
+                        <i class="fa-solid fa-database text-[#00758F] text-3xl"></i>
+                        <span class="text-sm uppercase tracking-widest font-bold text-gray-800 dark:text-gray-400">SQL</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex items-center gap-3 float-active">
+                        <i class="fa-brands fa-github text-[#181717] dark:text-white text-3xl"></i>
+                        <span class="text-sm uppercase tracking-widest font-bold text-gray-800 dark:text-gray-400">GitHub</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex items-center gap-3 float-active">
+                        <i class="fa-solid fa-bolt text-[#3ECF8E] text-3xl"></i>
+                        <span class="text-sm uppercase tracking-widest font-bold text-brand-gold">Supabase</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex items-center gap-3 float-active">
+                        <i class="fa-brands fa-python text-[#3776AB] text-3xl"></i>
+                        <span class="text-sm uppercase tracking-widest font-bold text-gray-800 dark:text-gray-400">Python</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex items-center gap-3 float-active">
+                        <i class="fa-brands fa-react text-[#61DAFB] text-3xl"></i>
+                        <span class="text-sm uppercase tracking-widest font-bold text-brand-gold">React</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex items-center gap-3 float-active">
+                        <i class="fa-brands fa-node-js text-[#339933] text-3xl"></i>
+                        <span class="text-sm uppercase tracking-widest font-bold text-gray-800 dark:text-gray-400">Node.js</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex items-center gap-3 float-active">
+                        <i class="fa-brands fa-aws text-[#FF9900] text-3xl"></i>
+                        <span class="text-sm uppercase tracking-widest font-bold text-gray-800 dark:text-gray-400">AWS</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex items-center gap-3 float-active">
+                        <i class="fa-solid fa-chart-line text-[#4CAF50] text-3xl"></i>
+                        <span class="text-sm uppercase tracking-widest font-bold text-gray-800 dark:text-gray-400">Data Analysis</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Duplicated for infinite effect -->
+            <div class="marquee-content" aria-hidden="true">
+                <!-- Group 2 (Exact Duplicate) -->
+                <div>
+                    <div class="flex items-center gap-3 float-active">
+                        <i class="fa-brands fa-html5 text-[#E34F26] text-3xl"></i>
+                        <span class="text-sm uppercase tracking-widest font-bold text-gray-800 dark:text-gray-400">HTML</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex items-center gap-3 float-active">
+                        <i class="fa-brands fa-js text-[#F7DF1E] text-3xl"></i>
+                        <span class="text-sm uppercase tracking-widest font-bold text-gray-800 dark:text-gray-400">JS</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex items-center gap-3 float-active">
+                        <i class="fa-brands fa-css3-alt text-[#1572B6] text-3xl"></i>
+                        <span class="text-sm uppercase tracking-widest font-bold text-gray-800 dark:text-gray-400">CSS</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex items-center gap-3 float-active">
+                        <i class="fa-brands fa-php text-[#777BB4] text-3xl"></i>
+                        <span class="text-sm uppercase tracking-widest font-bold text-gray-800 dark:text-gray-400">PHP</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex items-center gap-3 float-active">
+                        <i class="fa-solid fa-database text-[#00758F] text-3xl"></i>
+                        <span class="text-sm uppercase tracking-widest font-bold text-gray-800 dark:text-gray-400">SQL</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex items-center gap-3 float-active">
+                        <i class="fa-brands fa-github text-[#181717] dark:text-white text-3xl"></i>
+                        <span class="text-sm uppercase tracking-widest font-bold text-gray-800 dark:text-gray-400">GitHub</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex items-center gap-3 float-active">
+                        <i class="fa-solid fa-bolt text-[#3ECF8E] text-3xl"></i>
+                        <span class="text-sm uppercase tracking-widest font-bold text-brand-gold">Supabase</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex items-center gap-3 float-active">
+                        <i class="fa-brands fa-python text-[#3776AB] text-3xl"></i>
+                        <span class="text-sm uppercase tracking-widest font-bold text-gray-800 dark:text-gray-400">Python</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex items-center gap-3 float-active">
+                        <i class="fa-brands fa-react text-[#61DAFB] text-3xl"></i>
+                        <span class="text-sm uppercase tracking-widest font-bold text-brand-gold">React</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex items-center gap-3 float-active">
+                        <i class="fa-brands fa-node-js text-[#339933] text-3xl"></i>
+                        <span class="text-sm uppercase tracking-widest font-bold text-gray-800 dark:text-gray-400">Node.js</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex items-center gap-3 float-active">
+                        <i class="fa-brands fa-aws text-[#FF9900] text-3xl"></i>
+                        <span class="text-sm uppercase tracking-widest font-bold text-gray-800 dark:text-gray-400">AWS</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex items-center gap-3 float-active">
+                        <i class="fa-solid fa-chart-line text-[#4CAF50] text-3xl"></i>
+                        <span class="text-sm uppercase tracking-widest font-bold text-gray-800 dark:text-gray-400">Data Analysis</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 px-6 md:px-12 relative z-10">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20 reveal">
+                <h2 class="font-serif text-4xl md:text-6xl text-gray-900 dark:text-white mb-6">End-to-End <span class="font-serif-italic text-gradient-gold">Software Solutions</span></h2>
+                <div class="w-24 h-px bg-brand-gold mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                <!-- Service 1 -->
+                <div class="glass p-12 reveal anti-gravity-hover rounded-sm relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity duration-500 transform group-hover:scale-110 group-hover:rotate-12">
+                        <i class="fa-solid fa-code text-8xl text-brand-gold"></i>
+                    </div>
+                    <div class="relative z-10">
+                        <span class="text-xs uppercase tracking-widest font-bold text-brand-gold mb-4 block">01</span>
+                        <h3 class="font-serif text-3xl text-gray-900 dark:text-white mb-4">Custom Software Development</h3>
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed">Tailored software architectures meticulously designed to meet your highly specific business requirements, ensuring limitless scalability and operational supremacy.</p>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="glass p-12 reveal anti-gravity-hover rounded-sm relative overflow-hidden group" style="transition-delay: 100ms;">
+                    <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity duration-500 transform group-hover:scale-110 group-hover:-rotate-12">
+                        <i class="fa-solid fa-globe text-8xl text-brand-gold"></i>
+                    </div>
+                    <div class="relative z-10">
+                        <span class="text-xs uppercase tracking-widest font-bold text-brand-gold mb-4 block">02</span>
+                        <h3 class="font-serif text-3xl text-gray-900 dark:text-white mb-4">Web Development</h3>
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed">Highly scalable, responsive web applications built with cutting-edge modern technologies to deliver uncompromising user experiences.</p>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="glass p-12 reveal anti-gravity-hover rounded-sm relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity duration-500 transform group-hover:scale-110 group-hover:rotate-12">
+                        <i class="fa-solid fa-robot text-8xl text-brand-gold"></i>
+                    </div>
+                    <div class="relative z-10">
+                        <span class="text-xs uppercase tracking-widest font-bold text-brand-gold mb-4 block">03</span>
+                        <h3 class="font-serif text-3xl text-gray-900 dark:text-white mb-4">Automation & AI</h3>
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed">Deploying intelligent automation scripts and AI integrations to eradicate manual bottlenecks, transforming raw processes into seamless, rapid workflows.</p>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="glass p-12 reveal anti-gravity-hover rounded-sm relative overflow-hidden group" style="transition-delay: 100ms;">
+                    <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity duration-500 transform group-hover:scale-110 group-hover:-rotate-12">
+                        <i class="fa-solid fa-database text-8xl text-brand-gold"></i>
+                    </div>
+                    <div class="relative z-10">
+                        <span class="text-xs uppercase tracking-widest font-bold text-brand-gold mb-4 block">04</span>
+                        <h3 class="font-serif text-3xl text-gray-900 dark:text-white mb-4">Data Management Systems</h3>
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed">Comprehensive data analysis and management infrastructure. From complex attendance arrays to strict user panels with absolute admin control.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 px-6 md:px-12 relative z-10 border-y border-gray-200 dark:border-white/5 bg-white/20 dark:bg-black/20">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-24 reveal">
+                <h2 class="font-serif text-4xl text-gray-900 dark:text-white mb-4">The Architectural <span class="font-serif-italic text-gradient-gold">Process</span></h2>
+                <p class="text-gray-500">A Simple Process. Exceptional Results.</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-x-4 gap-y-12 text-center reveal relative">
+                <!-- Connecting Line Desktop -->
+                <div class="hidden lg:block absolute top-[28px] left-[10%] right-[10%] h-[1px] bg-gradient-to-r from-transparent via-brand-gold/50 to-transparent -z-10"></div>
+                
+                <!-- Step 1 -->
+                <div class="flex flex-col items-center group">
+                    <div class="w-14 h-14 rounded-full glass flex items-center justify-center text-brand-gold mb-6 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-brand-gold/10 transform scale-0 group-hover:scale-100 transition-transform duration-500 rounded-full"></div>
+                        <i class="fa-solid fa-magnifying-glass relative z-10"></i>
+                    </div>
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-gray-900 dark:text-white mb-2">Discover</h4>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">Goals & Audience.</p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="flex flex-col items-center group">
+                    <div class="w-14 h-14 rounded-full glass flex items-center justify-center text-brand-gold mb-6 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-brand-gold/10 transform scale-0 group-hover:scale-100 transition-transform duration-500 rounded-full"></div>
+                        <i class="fa-solid fa-pen-nib relative z-10"></i>
+                    </div>
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-gray-900 dark:text-white mb-2">Design</h4>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">Intuitive UI/UX wireframes.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="flex flex-col items-center group">
+                    <div class="w-14 h-14 rounded-full glass flex items-center justify-center text-brand-gold mb-6 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-brand-gold/10 transform scale-0 group-hover:scale-100 transition-transform duration-500 rounded-full"></div>
+                        <i class="fa-solid fa-laptop-code relative z-10"></i>
+                    </div>
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-gray-900 dark:text-white mb-2">Develop</h4>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">Scalable, clean engineering.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="flex flex-col items-center group">
+                    <div class="w-14 h-14 rounded-full glass flex items-center justify-center text-brand-gold mb-6 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-brand-gold/10 transform scale-0 group-hover:scale-100 transition-transform duration-500 rounded-full"></div>
+                        <i class="fa-solid fa-bug-slash relative z-10"></i>
+                    </div>
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-gray-900 dark:text-white mb-2">QA & Test</h4>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">Rigorous bug-free testing.</p>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="flex flex-col items-center group">
+                    <div class="w-14 h-14 rounded-full glass flex items-center justify-center text-brand-gold mb-6 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-brand-gold/10 transform scale-0 group-hover:scale-100 transition-transform duration-500 rounded-full"></div>
+                        <i class="fa-solid fa-rocket relative z-10"></i>
+                    </div>
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-gray-900 dark:text-white mb-2">Deploy</h4>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">Smooth production launch.</p>
+                </div>
+
+                <!-- Step 6 -->
+                <div class="flex flex-col items-center group">
+                    <div class="w-14 h-14 rounded-full glass flex items-center justify-center text-brand-gold mb-6 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-brand-gold/10 transform scale-0 group-hover:scale-100 transition-transform duration-500 rounded-full"></div>
+                        <i class="fa-solid fa-headset relative z-10"></i>
+                    </div>
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-gray-900 dark:text-white mb-2">Support</h4>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">Ongoing maintenance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-6 md:px-12 relative z-10">
+        <div class="max-w-4xl mx-auto glass p-10 flex flex-col md:flex-row items-center justify-between gap-8 rounded-sm reveal border border-brand-gold/20 shadow-[0_0_30px_rgba(212,175,55,0.05)]">
+            <div>
+                <div class="inline-flex items-center gap-2 px-3 py-1 bg-brand-gold/10 text-brand-gold text-[0.65rem] font-bold uppercase tracking-widest mb-4 rounded-sm border border-brand-gold/20">
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand-gold animate-pulse"></span> Expanding our 7-Member Team
+                </div>
+                <h3 class="font-serif text-2xl text-gray-900 dark:text-white mb-2">Join the Elite Roster.</h3>
+                <p class="text-sm text-gray-500 dark:text-gray-400">We are exclusively hiring remote top-tier talent.</p>
+            </div>
+            <button onclick="openModal('hiring-modal')" class="shrink-0 px-8 py-4 border border-gray-900 dark:border-white text-gray-900 dark:text-white hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors duration-500 font-bold uppercase tracking-widest text-xs rounded-sm">
+                Apply Now
+            </button>
+        </div>
+    </section>
+
+    <section class="py-32 px-6 md:px-12 relative z-10 text-center flex flex-col items-center">
+        <div class="reveal max-w-3xl">
+            <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl text-gray-900 dark:text-white mb-8">
+                Ready to elevate your <span class="font-serif-italic text-gradient-gold">enterprise?</span>
+            </h2>
+            <div class="w-16 h-px bg-brand-gold mx-auto mb-8"></div>
+            <p class="text-gray-600 dark:text-gray-400 text-lg mb-12">
+                Initiate a dialogue with our architectural team. Let us engineer your business growth.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
+                <button onclick="openModal('contact-modal')" class="px-10 py-5 bg-gray-900 dark:bg-white text-white dark:text-black font-bold uppercase tracking-widest text-xs hover:scale-105 transition-transform duration-300 rounded-sm w-full sm:w-auto shadow-xl">
+                    Contact Us Today
+                </button>
+                <a href="https://wa.me/919583950766" target="_blank" class="px-10 py-5 glass border-gray-300 dark:border-white/20 text-gray-900 dark:text-white hover:border-[#25D366] hover:text-[#25D366] dark:hover:border-[#25D366] dark:hover:text-[#25D366] transition-colors duration-300 font-bold uppercase tracking-widest text-xs w-full sm:w-auto flex items-center justify-center gap-3 rounded-sm">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> +91 95839 50766
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 px-6 border-t border-gray-200 dark:border-white/5 relative z-10 glass">
+        <div class="max-w-7xl mx-auto flex flex-col items-center gap-4 text-center">
+            <!-- Footer Logo -->
+            <div class="flex items-center gap-3 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+                <img src="https://i.ibb.co/V00YDLgN/logo.png" alt="KATAK Logo" class="h-6 w-6 object-cover rounded-full" onerror="this.onerror=null; this.style.display='none'"/>
+                <span class="font-serif text-lg font-bold tracking-widest text-gray-900 dark:text-white uppercase leading-none">Katak Technologies</span>
+            </div>
+            <p class="text-gray-400 text-[0.65rem] font-bold tracking-[0.2em] uppercase mt-4">
+                &copy; 2025 KATAK TECHNOLOGIES. Engineered without compromise.
+            </p>
+        </div>
+    </footer>
+
+    <div id="contact-modal" class="fixed inset-0 z-[999] hidden flex items-center justify-center p-4 sm:p-6">
+        <div class="absolute inset-0 bg-black/70 backdrop-blur-xl transition-opacity opacity-0" id="contact-backdrop" onclick="closeModal('contact-modal')"></div>
+        
+        <div class="relative w-full max-w-lg glass bg-white/80 dark:bg-[#050505]/80 border-gray-200 dark:border-brand-gold/10 rounded-sm shadow-2xl p-10 transform scale-95 opacity-0 transition-all duration-500" id="contact-content">
+            <button onclick="closeModal('contact-modal')" class="absolute top-6 right-6 w-8 h-8 flex items-center justify-center rounded-full border border-gray-300 dark:border-white/20 text-gray-500 hover:text-gray-900 dark:hover:text-white hover:border-gray-900 dark:hover:border-white transition-all focus:outline-none">
+                <i class="fa-solid fa-xmark text-sm"></i>
+            </button>
+            
+            <h3 class="font-serif text-3xl text-gray-900 dark:text-white mb-2">Project <span class="font-serif-italic text-gradient-gold">Inquiry</span></h3>
+            <p class="text-[0.65rem] text-gray-500 dark:text-gray-400 font-bold uppercase tracking-widest mb-8">Direct transmission to lead architects</p>
+            
+            <form onsubmit="handleContact(event)" class="space-y-6">
+                <div class="relative group">
+                    <input type="text" required placeholder="Full Name or Company" class="w-full bg-transparent border-b border-gray-300 dark:border-white/20 px-0 py-3 text-sm text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:border-brand-gold transition-colors rounded-none">
+                </div>
+                <div class="relative group">
+                    <input type="email" required placeholder="Corporate Email" class="w-full bg-transparent border-b border-gray-300 dark:border-white/20 px-0 py-3 text-sm text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:border-brand-gold transition-colors rounded-none">
+                </div>
+                <div class="relative group">
+                    <textarea required placeholder="Outline your requirements..." rows="3" class="w-full bg-transparent border-b border-gray-300 dark:border-white/20 px-0 py-3 text-sm text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:border-brand-gold transition-colors rounded-none resize-none"></textarea>
+                </div>
+                
+                <button type="submit" class="w-full py-4 mt-4 bg-gray-900 dark:bg-brand-gold text-white dark:text-black font-bold uppercase tracking-widest text-xs hover:bg-black dark:hover:bg-white transition-colors rounded-sm shadow-lg">
+                    Initialize Project
+                </button>
+            </form>
+            
+            <div id="contact-success" class="absolute inset-0 bg-white/95 dark:bg-[#050505]/95 backdrop-blur-xl flex flex-col items-center justify-center opacity-0 pointer-events-none transition-opacity duration-500 rounded-sm">
+                <div class="w-16 h-16 rounded-full border-2 border-brand-gold flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-check text-2xl text-brand-gold"></i>
+                </div>
+                <h4 class="font-serif text-2xl text-gray-900 dark:text-white mb-2">Transmission Secured.</h4>
+                <p class="text-gray-500 text-sm">Our architects will review and respond.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="hiring-modal" class="fixed inset-0 z-[999] hidden flex items-center justify-center p-4 sm:p-6">
+        <div class="absolute inset-0 bg-black/70 backdrop-blur-xl transition-opacity opacity-0" id="hiring-backdrop" onclick="closeModal('hiring-modal')"></div>
+        
+        <div class="relative w-full max-w-2xl glass bg-white/90 dark:bg-[#050505]/90 border-gray-200 dark:border-brand-gold/20 rounded-sm shadow-2xl p-8 md:p-12 transform scale-95 opacity-0 transition-all duration-500 max-h-[90vh] overflow-y-auto" id="hiring-content">
+            <button onclick="closeModal('hiring-modal')" class="absolute top-6 right-6 w-8 h-8 flex items-center justify-center rounded-full border border-gray-300 dark:border-white/20 text-gray-500 hover:text-gray-900 dark:hover:text-white hover:border-gray-900 dark:hover:border-white transition-all focus:outline-none z-10">
+                <i class="fa-solid fa-xmark text-sm"></i>
+            </button>
+            
+            <div class="text-center mb-10">
+                <h3 class="font-serif text-3xl md:text-4xl text-gray-900 dark:text-white mb-3">Elite Hiring <span class="font-serif-italic text-gradient-gold">Protocol</span></h3>
+                <p class="text-[0.65rem] text-gray-500 dark:text-gray-400 font-bold uppercase tracking-widest">Team of 7 • Remote Operatives Only</p>
+            </div>
+            
+            <div class="space-y-10">
+                <div class="glass p-6 border-l-2 border-l-brand-gold bg-brand-gold/5 rounded-r-sm">
+                    <p class="text-gray-900 dark:text-gray-200 text-sm leading-relaxed mb-4">
+                        To initiate your application, email us strictly with the following note structure. Include your resume and comprehensive portfolio detailing your work hours.
+                    </p>
+                    <div class="bg-white dark:bg-black p-4 rounded-sm border border-gray-200 dark:border-white/10 font-mono text-xs text-brand-copper dark:text-brand-gold mb-4">
+                        "Attached your resume & portfolio with work hours"
+                    </div>
+                    
+                    <div class="flex items-center justify-between bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 p-3 rounded-sm">
+                        <span class="text-gray-900 dark:text-white font-mono text-xs truncate" id="hr-email">join@kataktechnologies.com</span>
+                        <button onclick="copyEmail()" class="text-[10px] font-bold uppercase tracking-widest bg-gray-900 dark:bg-white text-white dark:text-black px-4 py-2 rounded-sm hover:bg-brand-gold dark:hover:bg-brand-gold transition-colors" id="copy-btn">
+                            Copy Email
+                        </button>
+                    </div>
+                    <div id="copy-toast" class="h-0 overflow-hidden opacity-0 transition-all duration-300 text-[10px] text-emerald-600 dark:text-emerald-400 font-bold uppercase tracking-widest mt-2 text-right">
+                        Address copied to clipboard.
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-xs font-bold text-gray-900 dark:text-white uppercase tracking-[0.15em] mb-6 flex items-center gap-3">
+                        <span class="w-6 h-px bg-brand-gold"></span> The Interview Architecture
+                    </h4>
+                    
+                    <div class="relative border-l border-brand-gold/30 ml-3 pl-8 space-y-8">
+                        <div class="relative">
+                            <span class="absolute -left-[37px] top-1 w-2.5 h-2.5 bg-gray-900 dark:bg-white rounded-full ring-4 ring-white dark:ring-[#050505]"></span>
+                            <h5 class="text-sm font-bold text-gray-900 dark:text-white mb-1">1. Qualification & Scheduling</h5>
+                            <p class="text-xs text-gray-500 dark:text-gray-400">If qualified based on portfolio review, you will receive a secure interview invitation URL to select your preferred time slot.</p>
+                        </div>
+                        <div class="relative">
+                            <span class="absolute -left-[37px] top-1 w-2.5 h-2.5 bg-gray-900 dark:bg-white rounded-full ring-4 ring-white dark:ring-[#050505]"></span>
+                            <h5 class="text-sm font-bold text-gray-900 dark:text-white mb-1">2. Technical Assessment</h5>
+                            <p class="text-xs text-gray-500 dark:text-gray-400">A brief introduction followed by intensive interview questions focused on logic, architecture, and coding proficiency.</p>
+                        </div>
+                        <div class="relative">
+                            <span class="absolute -left-[37px] top-1 w-2.5 h-2.5 bg-gray-900 dark:bg-white rounded-full ring-4 ring-white dark:ring-[#050505]"></span>
+                            <h5 class="text-sm font-bold text-gray-900 dark:text-white mb-1">3. Executive Discussion</h5>
+                            <p class="text-xs text-gray-500 dark:text-gray-400">Final discussion concerning salary, remote logistics, and organizational alignment.</p>
+                        </div>
+                        <div class="relative">
+                            <span class="absolute -left-[40px] top-0 w-4 h-4 bg-brand-gold rounded-full ring-4 ring-white dark:ring-[#050505] animate-pulse"></span>
+                            <h5 class="text-sm font-bold text-brand-gold uppercase tracking-widest mt-1">Hired at KATAK Technologies</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <button onclick="closeModal('hiring-modal')" class="w-full mt-12 py-4 border border-gray-300 dark:border-white/20 text-gray-900 dark:text-white font-bold uppercase tracking-widest text-xs hover:border-brand-gold hover:text-brand-gold dark:hover:border-brand-gold dark:hover:text-brand-gold transition-colors rounded-sm">
+                Acknowledge Protocol
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            const html = document.documentElement;
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        if (localStorage.getItem('theme') === 'light') {
+            document.documentElement.classList.remove('dark');
+        }
+
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+        
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('glass', 'shadow-sm', 'py-4');
+                navbar.classList.remove('py-6');
+            } else {
+                navbar.classList.remove('glass', 'shadow-sm', 'py-4');
+                navbar.classList.add('py-6');
+            }
+        });
+
+        function openModal(id) {
+            const modal = document.getElementById(id);
+            const backdrop = document.getElementById(id.split('-')[0] + '-backdrop');
+            const content = document.getElementById(id.split('-')[0] + '-content');
+            
+            modal.classList.remove('hidden');
+            void modal.offsetWidth;
+            
+            backdrop.classList.remove('opacity-0');
+            backdrop.classList.add('opacity-100');
+            
+            content.classList.remove('scale-95', 'opacity-0');
+            content.classList.add('scale-100', 'opacity-100');
+            
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(id) {
+            const modal = document.getElementById(id);
+            const backdrop = document.getElementById(id.split('-')[0] + '-backdrop');
+            const content = document.getElementById(id.split('-')[0] + '-content');
+            
+            backdrop.classList.remove('opacity-100');
+            backdrop.classList.add('opacity-0');
+            
+            content.classList.remove('scale-100', 'opacity-100');
+            content.classList.add('scale-95', 'opacity-0');
+            
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = '';
+                
+                if(id === 'contact-modal') {
+                    const successDiv = document.getElementById('contact-success');
+                    successDiv.classList.replace('opacity-100', 'opacity-0');
+                    successDiv.classList.replace('pointer-events-auto', 'pointer-events-none');
+                    document.querySelector('#contact-modal form').reset();
+                }
+                
+                if(id === 'hiring-modal') {
+                    const btn = document.getElementById('copy-btn');
+                    const toast = document.getElementById('copy-toast');
+                    btn.innerText = 'Copy Email';
+                    btn.classList.remove('bg-emerald-600', 'text-white');
+                    toast.classList.replace('h-6', 'h-0');
+                    toast.classList.replace('opacity-100', 'opacity-0');
+                }
+            }, 500);
+        }
+
+        function handleContact(e) {
+            e.preventDefault();
+            const successOverlay = document.getElementById('contact-success');
+            
+            successOverlay.classList.replace('opacity-0', 'opacity-100');
+            successOverlay.classList.replace('pointer-events-none', 'pointer-events-auto');
+            
+            setTimeout(() => {
+                closeModal('contact-modal');
+            }, 3000);
+        }
+
+        function copyEmail() {
+            const emailText = document.getElementById('hr-email').innerText;
+            const btn = document.getElementById('copy-btn');
+            const toast = document.getElementById('copy-toast');
+            
+            const textarea = document.createElement('textarea');
+            textarea.value = emailText;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            
+            try {
+                document.execCommand('copy');
+                
+                btn.innerText = 'Copied';
+                btn.classList.add('bg-emerald-600', 'text-white');
+                
+                toast.classList.replace('h-0', 'h-6');
+                toast.classList.replace('opacity-0', 'opacity-100');
+                
+                setTimeout(() => {
+                    btn.innerText = 'Copy Email';
+                    btn.classList.remove('bg-emerald-600', 'text-white');
+                    toast.classList.replace('h-6', 'h-0');
+                    toast.classList.replace('opacity-100', 'opacity-0');
+                }, 3000);
+            } catch (err) {
+                console.error('Copy mechanism failed', err);
+                btn.innerText = 'Failed';
+            } finally {
+                document.body.removeChild(textarea);
+            }
+        }
+    </script>
+</body>
+</html>
